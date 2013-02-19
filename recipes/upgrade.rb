@@ -7,7 +7,9 @@
 # Then you can configure your provisions below the block.
 #
 
-linux_package "Opscode Chef Client Installer for Ubuntu Precise" do
+
+package "Opscode Chef Client Installer for Ubuntu Precise" do
   source "https://www.opscode.com/chef/install.sh"
-  action :install
+  
+  action :install if platform? "debian", "ubuntu"
 end
