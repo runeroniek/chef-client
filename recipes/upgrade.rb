@@ -11,5 +11,5 @@
 package "Opscode Chef Client Installer for Ubuntu Precise" do
   source "https://www.opscode.com/chef/install.sh"
   
-  action :install if platform? "debian", "ubuntu"
+  action :install
 end
